@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="75500c16be354a73a34d391fb2125f3b" Name="Diagram1">
+        <EntityTypeShape EntityType="SchoolMgtDbModel.AnnualTable" Width="1.5" PointX="7.5" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.ClassSubjectTable" Width="1.5" PointX="10.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.ClassTable" Width="1.5" PointX="8.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.DesignationTable" Width="1.5" PointX="5.25" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.EmployeeSalaryTable" Width="1.5" PointX="9.75" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.EventTable" Width="1.5" PointX="5.25" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.ExamMarksTable" Width="1.5" PointX="7.5" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.ExamTable" Width="1.5" PointX="5.25" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.ExpensesTable" Width="1.5" PointX="5.25" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.ExpensesTypeTable" Width="1.5" PointX="3" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.FeeSubmissionTable" Width="1.5" PointX="10.5" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.ProgramSessionTable" Width="1.5" PointX="7.5" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.ProgramTable" Width="1.5" PointX="5.25" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.SectionTable" Width="1.5" PointX="10.5" PointY="49.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.SessionTable" Width="1.5" PointX="5.25" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.StaffAttendanceTable" Width="1.5" PointX="9.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.StaffTable" Width="1.5" PointX="7.5" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.StudentAttendanceTable" Width="1.5" PointX="12.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.StudentPromoteTable" Width="1.5" PointX="12.75" PointY="42.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.StudentSchoolLeavingTable" Width="1.5" PointX="12.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.StudentTable" Width="1.5" PointX="10.5" PointY="40.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.SubjectTable" Width="1.5" PointX="5.25" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.TimeTblTable" Width="1.5" PointX="12.75" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.UserTable" Width="1.5" PointX="3" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolMgtDbModel.UserTypeTable" Width="1.5" PointX="0.75" PointY="27.625" IsExpanded="true" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_AnnualTable_ProgramTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_AnnualTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ClassSubjectTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ExamMarksTable_ClassSubjectTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_TimeTblTable_ClassSubjectTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_FeeSubmissionTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentAttendanceTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentPromoteTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentSchoolLeavingTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_DesignationTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StaffTable_DesignationTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_EmployeeSalaryTable_StaffTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_EmployeeSalaryTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_EventTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ExamMarksTable_ExamTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ExamMarksTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ExamMarksTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ExamTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ExpensesTable_ExpensesTypeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ExpensesTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_FeeSubmissionTable_ProgramTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_FeeSubmissionTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_FeeSubmissionTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ProgramSessionTable_ProgramTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ProgramSessionTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ProgramSessionTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentPromoteTable_ProgramSessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_ProgramTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentTable_ProgramTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentPromoteTable_SectionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_SessionTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentAttendanceTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StaffAttendanceTable_StaffTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StaffTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_TimeTblTable_StaffTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentAttendanceTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentPromoteTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentSchoolLeavingTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentSchoolLeavingTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_StudentTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_SubjectTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_TimeTblTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolMgtDbModel.FK_UserTable_UserTypeTable" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolManagementUI", "SchoolManagementUI\SchoolManagementUI.csproj", "{F0AB62BC-A762-4456-B59E-F6D5065BC41C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseLayer", "DatabaseLayer\DatabaseLayer.csproj", "{7BEC2B15-4A45-4116-BFBB-0A12FDD47437}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0AB62BC-A762-4456-B59E-F6D5065BC41C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0AB62BC-A762-4456-B59E-F6D5065BC41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0AB62BC-A762-4456-B59E-F6D5065BC41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0AB62BC-A762-4456-B59E-F6D5065BC41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BEC2B15-4A45-4116-BFBB-0A12FDD47437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BEC2B15-4A45-4116-BFBB-0A12FDD47437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BEC2B15-4A45-4116-BFBB-0A12FDD47437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BEC2B15-4A45-4116-BFBB-0A12FDD47437}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
