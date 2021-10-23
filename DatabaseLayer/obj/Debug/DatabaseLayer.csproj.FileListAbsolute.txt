@@ -7,4 +7,3 @@ D:\FYP School Management System\Application\SchoolManagementSystem\DatabaseLayer
 D:\FYP School Management System\Application\SchoolManagementSystem\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\FYP School Management System\Application\SchoolManagementSystem\DatabaseLayer\bin\Debug\EntityFramework.xml
 D:\FYP School Management System\Application\SchoolManagementSystem\DatabaseLayer\bin\Debug\EntityFramework.SqlServer.xml
-D:\FYP School Management System\Application\SchoolManagementSystem\DatabaseLayer\obj\Debug\DatabaseLayer.csprojResolveAssemblyReference.cache

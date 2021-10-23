@@ -11,20 +11,27 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TimeTblTable
     {
         public int TimeTableID { get; set; }
         public int UserID { get; set; }
         public int StaffID { get; set; }
+        [DataType(DataType.Time)]
         public System.TimeSpan StartTime { get; set; }
+        [DataType(DataType.Time)]
         public System.TimeSpan EndTime { get; set; }
         public string Day { get; set; }
         public int ClassSubjectID { get; set; }
         public bool IsActive { get; set; }
+        public int ClassID { get; set; }
     
         public virtual ClassSubjectTable ClassSubjectTable { get; set; }
+        public virtual ClassTable ClassTable { get; set; }
         public virtual StaffTable StaffTable { get; set; }
+        public virtual TimeTblTable TimeTblTable1 { get; set; }
+        public virtual TimeTblTable TimeTblTable2 { get; set; }
         public virtual UserTable UserTable { get; set; }
     }
 }

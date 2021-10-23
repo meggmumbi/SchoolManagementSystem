@@ -11,13 +11,16 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class SessionTable
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SessionTable()
         {
+            this.AttendanceTables = new HashSet<AttendanceTable>();
             this.ProgramSessionTables = new HashSet<ProgramSessionTable>();
+            this.SessionProgrameSubjectSettingTables = new HashSet<SessionProgrameSubjectSettingTable>();
             this.StudentAttendanceTables = new HashSet<StudentAttendanceTable>();
             this.StudentTables = new HashSet<StudentTable>();
         }
@@ -25,11 +28,17 @@ namespace DatabaseLayer
         public int SessionID { get; set; }
         public int UserID { get; set; }
         public string Name { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime StartDate { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime EndDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AttendanceTable> AttendanceTables { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProgramSessionTable> ProgramSessionTables { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SessionProgrameSubjectSettingTable> SessionProgrameSubjectSettingTables { get; set; }
         public virtual UserTable UserTable { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudentAttendanceTable> StudentAttendanceTables { get; set; }

@@ -1,0 +1,72 @@
+﻿@model DatabaseLayer.AnnualTable
+
+@{
+    ViewBag.Title = "Annual / Promote Fee";
+}
+
+<h2>Annual / Promote Fee</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AnnualTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Annual / Promote Fee Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            Fees
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fees)
+        </dd>
+
+        <dt>
+            Status
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            Fee Details
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+           Program
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgramTable.Name)
+        </dd>
+
+        <dt>
+           User
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserTable.FullName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

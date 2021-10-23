@@ -11,7 +11,8 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class StudentPromoteTable
     {
         public int StudentPromoteID { get; set; }
@@ -19,6 +20,7 @@ namespace DatabaseLayer
         public int ClassID { get; set; }
         public int ProgramSessionID { get; set; }
         public int SectionID { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime PromoteDate { get; set; }
         public double AnnualFee { get; set; }
         public bool IsPromote { get; set; }

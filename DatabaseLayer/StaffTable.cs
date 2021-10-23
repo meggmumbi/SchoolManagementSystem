@@ -11,7 +11,8 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class StaffTable
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -42,6 +43,7 @@ namespace DatabaseLayer
         public string ifmedicationyesthengiveusdetails { get; set; }
         public bool AnyCriminaloffenceagainstyou { get; set; }
         public string ifcriminaloffenceyesthengiveusdetails { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime RegistrationDate { get; set; }
     
         public virtual DesignationTable DesignationTable { get; set; }

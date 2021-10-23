@@ -63,7 +63,7 @@ namespace SchoolManagementUI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,UserTypeID,FullName,UserName,Password,ContactNo,EmailAddress,Address")] UserTable userTable)
+        public ActionResult Create(UserTable userTable)
         {
             if (string.IsNullOrEmpty(Convert.ToString(Session["UserName"])))
             {

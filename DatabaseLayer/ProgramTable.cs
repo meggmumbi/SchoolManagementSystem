@@ -11,7 +11,8 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class ProgramTable
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,12 +21,14 @@ namespace DatabaseLayer
             this.AnnualTables = new HashSet<AnnualTable>();
             this.FeeSubmissionTables = new HashSet<FeeSubmissionTable>();
             this.ProgramSessionTables = new HashSet<ProgramSessionTable>();
+            this.SessionProgrameSubjectSettingTables = new HashSet<SessionProgrameSubjectSettingTable>();
             this.StudentTables = new HashSet<StudentTable>();
         }
     
         public int ProgramID { get; set; }
         public int UserID { get; set; }
         public string Name { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime StartDate { get; set; }
         public bool IsActive { get; set; }
     
@@ -36,6 +39,8 @@ namespace DatabaseLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProgramSessionTable> ProgramSessionTables { get; set; }
         public virtual UserTable UserTable { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SessionProgrameSubjectSettingTable> SessionProgrameSubjectSettingTables { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudentTable> StudentTables { get; set; }
     }

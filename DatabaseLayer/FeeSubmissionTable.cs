@@ -11,7 +11,8 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class FeeSubmissionTable
     {
         public int SubmissionFeeID { get; set; }
@@ -20,6 +21,7 @@ namespace DatabaseLayer
         public int StudentID { get; set; }
         public double Amount { get; set; }
         public int ProgramID { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime SubmissionDate { get; set; }
         public string FeesMonth { get; set; }
         public string Description { get; set; }

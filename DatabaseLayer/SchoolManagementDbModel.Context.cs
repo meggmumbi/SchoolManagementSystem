@@ -26,6 +26,7 @@ namespace DatabaseLayer
         }
     
         public virtual DbSet<AnnualTable> AnnualTables { get; set; }
+        public virtual DbSet<AttendanceTable> AttendanceTables { get; set; }
         public virtual DbSet<ClassSubjectTable> ClassSubjectTables { get; set; }
         public virtual DbSet<ClassTable> ClassTables { get; set; }
         public virtual DbSet<DesignationTable> DesignationTables { get; set; }
@@ -39,6 +40,7 @@ namespace DatabaseLayer
         public virtual DbSet<ProgramSessionTable> ProgramSessionTables { get; set; }
         public virtual DbSet<ProgramTable> ProgramTables { get; set; }
         public virtual DbSet<SectionTable> SectionTables { get; set; }
+        public virtual DbSet<SessionProgrameSubjectSettingTable> SessionProgrameSubjectSettingTables { get; set; }
         public virtual DbSet<SessionTable> SessionTables { get; set; }
         public virtual DbSet<StaffAttendanceTable> StaffAttendanceTables { get; set; }
         public virtual DbSet<StaffTable> StaffTables { get; set; }

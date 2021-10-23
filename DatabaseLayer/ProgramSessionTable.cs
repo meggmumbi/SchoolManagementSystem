@@ -11,7 +11,8 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class ProgramSessionTable
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,6 +26,7 @@ namespace DatabaseLayer
         public int SessionID { get; set; }
         public int ProgramID { get; set; }
         public string Title { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime RegDate { get; set; }
         public string Description { get; set; }
     

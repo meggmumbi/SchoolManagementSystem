@@ -11,11 +11,13 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class ExpensesTable
     {
         public int ExpensesID { get; set; }
         public int ExpensesTypeID { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime ExpenseDate { get; set; }
         public double Amount { get; set; }
         public string Reason { get; set; }

@@ -1,17 +1,17 @@
 ﻿@model DatabaseLayer.UserTable
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Users";
 }
 
 <h2>Details</h2>
 
 <div>
-    <h4>UserTable</h4>
+    <h4>User</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.FullName)
+           Full Name 
         </dt>
 
         <dd>
@@ -19,23 +19,17 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.UserName)
+           User Name
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.UserName)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
+     
 
         <dt>
-            @Html.DisplayNameFor(model => model.ContactNo)
+          Contact No.
         </dt>
 
         <dd>
@@ -43,7 +37,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EmailAddress)
+           Email Address
         </dt>
 
         <dd>
@@ -51,7 +45,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Address)
+           Address
         </dt>
 
         <dd>
@@ -59,7 +53,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.UserTypeTable.TypeName)
+           User Type
         </dt>
 
         <dd>
@@ -69,6 +63,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index",null,new { @class = "btn btn-default" })
 </p>

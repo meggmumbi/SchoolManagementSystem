@@ -54,6 +54,9 @@
     <Compile Include="AnnualTable.cs">
       <DependentUpon>SchoolManagementDbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceTable.cs">
+      <DependentUpon>SchoolManagementDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ClassSubjectTable.cs">
       <DependentUpon>SchoolManagementDbModel.tt</DependentUpon>
     </Compile>
@@ -107,6 +110,9 @@
       <DependentUpon>SchoolManagementDbModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="SectionTable.cs">
+      <DependentUpon>SchoolManagementDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SessionProgrameSubjectSettingTable.cs">
       <DependentUpon>SchoolManagementDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SessionTable.cs">

@@ -11,14 +11,19 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class StaffAttendanceTable
     {
         public int StaffAttendanceID { get; set; }
         public int StaffID { get; set; }
+        [DataType(DataType.Date)]
         public System.DateTime AttendDate { get; set; }
+        [DataType(DataType.Time)]
         public System.TimeSpan AttendTime { get; set; }
+        [DataType(DataType.Time)]
         public System.TimeSpan ComingTime { get; set; }
+        [DataType(DataType.Time)]
         public System.TimeSpan ClosingTime { get; set; }
     
         public virtual StaffTable StaffTable { get; set; }

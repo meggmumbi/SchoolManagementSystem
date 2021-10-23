@@ -14,6 +14,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="AttendanceTables">
+      <EntityTypeMapping TypeName="SchoolMgtDbModel.AttendanceTable">
+        <MappingFragment StoreEntitySet="AttendanceTable">
+          <ScalarProperty Name="AttendanceID" ColumnName="AttendanceID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="AttendDate" ColumnName="AttendDate" />
+          <ScalarProperty Name="AttendTime" ColumnName="AttendTime" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ClassSubjectTables">
       <EntityTypeMapping TypeName="SchoolMgtDbModel.ClassSubjectTable">
         <MappingFragment StoreEntitySet="ClassSubjectTable">
@@ -163,6 +175,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SessionProgrameSubjectSettingTables">
+      <EntityTypeMapping TypeName="SchoolMgtDbModel.SessionProgrameSubjectSettingTable">
+        <MappingFragment StoreEntitySet="SessionProgrameSubjectSettingTable">
+          <ScalarProperty Name="SessionProgramSubjectSettingTableID" ColumnName="SessionProgramSubjectSettingTableID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="SessionTables">
       <EntityTypeMapping TypeName="SchoolMgtDbModel.SessionTable">
         <MappingFragment StoreEntitySet="SessionTable">
@@ -282,6 +309,10 @@
           <ScalarProperty Name="FatherGuardianPostalAddress" ColumnName="FatherGuardianPostalAddress" />
           <ScalarProperty Name="PhoneOffice" ColumnName="PhoneOffice" />
           <ScalarProperty Name="PhoneResident" ColumnName="PhoneResident" />
+          <ScalarProperty Name="IsEnrolled" ColumnName="IsEnrolled" />
+          <ScalarProperty Name="ApplyDate" ColumnName="ApplyDate" />
+          <ScalarProperty Name="IsShortList" ColumnName="IsShortList" />
+          <ScalarProperty Name="IsApply" ColumnName="IsApply" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -293,6 +324,7 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="RegDate" ColumnName="RegDate" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalMarks" ColumnName="TotalMarks" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -318,6 +350,7 @@
           <ScalarProperty Name="Day" ColumnName="Day" />
           <ScalarProperty Name="ClassSubjectID" ColumnName="ClassSubjectID" />
           <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

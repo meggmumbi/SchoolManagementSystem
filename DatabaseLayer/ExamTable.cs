@@ -11,7 +11,8 @@ namespace DatabaseLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class ExamTable
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,8 +24,11 @@ namespace DatabaseLayer
         public int ExamID { get; set; }
         public int UserID { get; set; }
         public string Title { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
+
+        [DataType(DataType.Date)]
+        public System.DateTime StartDate { get; set; }
+        [DataType(DataType.Date)]
+        public System.DateTime EndDate { get; set; }
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

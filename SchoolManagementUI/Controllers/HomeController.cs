@@ -115,6 +115,7 @@ namespace SchoolManagementUI.Controllers
 
         public ActionResult About()
         {
+            ViewBag.message = "Welcome margaret";
             return View();
         }
 

@@ -17,12 +17,15 @@ namespace DatabaseLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ClassTable()
         {
+            this.AttendanceTables = new HashSet<AttendanceTable>();
             this.ClassSubjectTables = new HashSet<ClassSubjectTable>();
             this.FeeSubmissionTables = new HashSet<FeeSubmissionTable>();
+            this.SessionProgrameSubjectSettingTables = new HashSet<SessionProgrameSubjectSettingTable>();
             this.StudentAttendanceTables = new HashSet<StudentAttendanceTable>();
             this.StudentPromoteTables = new HashSet<StudentPromoteTable>();
             this.StudentSchoolLeavingTables = new HashSet<StudentSchoolLeavingTable>();
             this.StudentTables = new HashSet<StudentTable>();
+            this.TimeTblTables = new HashSet<TimeTblTable>();
         }
     
         public int ClassID { get; set; }
@@ -30,9 +33,13 @@ namespace DatabaseLayer
         public bool IsActive { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AttendanceTable> AttendanceTables { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClassSubjectTable> ClassSubjectTables { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FeeSubmissionTable> FeeSubmissionTables { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SessionProgrameSubjectSettingTable> SessionProgrameSubjectSettingTables { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudentAttendanceTable> StudentAttendanceTables { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -41,5 +48,7 @@ namespace DatabaseLayer
         public virtual ICollection<StudentSchoolLeavingTable> StudentSchoolLeavingTables { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudentTable> StudentTables { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TimeTblTable> TimeTblTables { get; set; }
     }
 }
