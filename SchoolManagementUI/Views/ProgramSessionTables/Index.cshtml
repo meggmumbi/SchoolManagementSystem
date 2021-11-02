@@ -1,0 +1,63 @@
+﻿@model IEnumerable<DatabaseLayer.ProgramSessionTable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProgramTable.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SessionTable.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserTable.FullName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProgramTable.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionTable.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserTable.FullName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProgramSessionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProgramSessionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProgramSessionID })
+        </td>
+    </tr>
+}
+
+</table>
